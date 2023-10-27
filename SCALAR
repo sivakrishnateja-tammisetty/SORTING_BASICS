@@ -3,6 +3,7 @@ using: sort(start,end+1)
 we need to include  #include<algorithm> header file to work with sort function.
 
 
+                                 //USING SORT()
 #include <iostream>
 #include<algorithm>
 using namespace std;
@@ -17,6 +18,29 @@ int main() {
 int a[]={1,3,2,0};
 int n=sizeof(a)/sizeof(a[0]);
 sort(a,a+n);
+display(a,n);
+    return 0;
+}
+
+
+
+
+                               //SORTING USING COMPARATOR
+#include <iostream>
+#include<algorithm>
+using namespace std;
+void display(int *a,int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+}
+int main() {
+int a[]={1,3,2,0};
+int n=sizeof(a)/sizeof(a[0]);
+//SORT + GREATER ELEMENT WITH FIRST
+sort(a,a+n,greater<int>());
 display(a,n);
     return 0;
 }
